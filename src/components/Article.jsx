@@ -1,5 +1,5 @@
 import React from 'react'
-
+import broken from './broken.png'
 import {Card, CardContent, Grid, makeStyles, Typography} from '@material-ui/core'
 
 const useStyles = makeStyles(theme => ({
@@ -65,7 +65,7 @@ export const Article = ({article}) => {
             <CardContent className ={classes.container}>
                 <Grid container>
                     <Grid item lg={5} md={5} sm={5} xs={12}>
-                        <img src={article.urlToImage} alt="" className= {classes.image}></img>
+                        <img src={article.urlToImage ? article.urlToImage : broken} alt="" className= {classes.image}></img>
                     </Grid>
                     <Grid item lg={7} md={7} sm={7} xs={12} className={classes.rightContainer}>
                         <Typography className={classes.title}>{article.title}</Typography>

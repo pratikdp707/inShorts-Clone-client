@@ -16,7 +16,8 @@ export const News = (props) => {
 
     const dailyNews = async () => {
         let data = await getNews(props.category);
-        props.setnews(data.data.articles);
+        //console.log(data)
+        props.setnews(data.data.data);
     };
 
     useEffect(() => {
