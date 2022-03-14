@@ -17,12 +17,14 @@ export const News = (props) => {
     const dailyNews = async () => {
         let data = await getNews(props.category);
         //console.log(data)
-        props.setnews(data.data.data);
+        // props.setnews(data.data.data);
+        // console.log(data)
+        props.setnews(data.data.articles)
     };
 
     useEffect(() => {
         dailyNews();
-    });
+    },[props.category]);
 
     return (
         <Box className={classes.container}>

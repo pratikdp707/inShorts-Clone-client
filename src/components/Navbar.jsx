@@ -107,7 +107,7 @@ export const Navbar = (props) => {
                 <Divider />
                 <List className={classes.drawerCategory}>
                     &nbsp;&nbsp;Categories
-                    {['All News', 'Business', 'Sports', 'Politics', 'Technology', 'Entertainment', 'Science', 'Health'].map(category => (
+                    {['All News', 'Business', 'Sports', 'Technology', 'Entertainment', 'Science', 'Health'].map(category => (
                         <Button className={classes.button} onClick={() => handleClick(category)}>
                             {category}
                         </Button>
